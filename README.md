@@ -1,5 +1,8 @@
 # 轻待办 LightTodo（验证版）
 
+> 下载：[最新 Release](https://github.com/einstein071115/light_todo_list/releases/latest)（APK 见 Release 附件，Android 8.0+）
+
+
 一个 Android 桌面小组件待办 App，目标是把这条链路先跑通：
 
 > App 里加待办 → 桌面小组件显示 → 在小组件上点一下勾选完成 → App 内同步
