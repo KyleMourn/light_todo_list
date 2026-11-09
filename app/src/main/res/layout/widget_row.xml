@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 卡片里的一行：圆圈（只负责勾选）+ 文字（点击打开编辑页看全文）。
+     注意：RemoteViews 不接受可滚动容器（HorizontalScrollView 会让桌面报
+     「无法添加微件」），所以长文字改为自动换行、完整显示，不截断也不加省略号。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:paddingTop="2dp"
+        android:paddingEnd="3dp"
+        android:text="○" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="1dp"
+        android:text="" />
+</LinearLayout>

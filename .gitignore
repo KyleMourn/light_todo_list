@@ -1,0 +1,21 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# 本地工具链与缓存（不要提交）
+.android-sdk/
+.gradle-home/
+.android/
+.tools/
+.dsh/
+*.log
+# 本地打包的源码备份，不进仓库
+docs/lighttodo-source.zip

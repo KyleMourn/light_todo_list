@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">轻待办</string>
+    <string name="home_subtitle">每张桌面卡片是一个独立清单，点进去管理待办和外观</string>
+    <string name="home_hint">还没有卡片？桌面长按空白处 → 小组件 → 轻待办 → 添加到桌面</string>
+    <string name="home_empty">桌面上还没有「轻待办」卡片</string>
+    <string name="hint_new_todo">要做什么？</string>
+    <string name="action_add">添加</string>
+    <string name="action_delete">删除</string>
+    <string name="action_save">保存</string>
+    <string name="action_rename_card">卡片名称</string>
+    <string name="action_widget_settings">外观</string>
+    <string name="hint_card_name">留空则显示「卡片 #%d」</string>
+    <string name="label_show_done">显示已完成的待办</string>
+    <string name="empty_todo">还没有待办，先添加一条吧</string>
+    <string name="card_title">卡片 #%d</string>
+    <string name="card_summary">%1$d 条待办 · %2$d 条未完成</string>
+    <string name="card_summary_empty">还没有待办</string>
+    <string name="edit_todo_title">修改待办</string>
+    <string name="edit_todo_hint">待办内容</string>
+    <string name="edit_saved">已保存</string>
+
+    <string name="widget_label">轻待办 · 经典</string>
+    <string name="widget_description">在桌面查看和勾选待办事项</string>
+    <string name="widget_label_dual">轻待办 · 双栏</string>
+    <string name="widget_description_dual">左右两栏，各放一组待办</string>
+    <string name="hint_rename_card">长按标题可修改卡片名称</string>
+    <string name="rename_card_title">修改卡片名称</string>
+    <string name="hint_card_name_empty">留空则显示「卡片 #%d」</string>
+    <string name="action_cancel">取消</string>
+    <string name="column_left">左栏</string>
+    <string name="column_right">右栏</string>
+    <string name="type_classic">经典</string>
+    <string name="type_dual">双栏</string>
+    <string name="rename_column_title">修改栏名称</string>
+    <string name="hint_column_name_empty">留空则用默认名称（左栏 / 右栏）</string>
+    <string name="hint_rename_column">长按栏名可修改</string>
+</resources>

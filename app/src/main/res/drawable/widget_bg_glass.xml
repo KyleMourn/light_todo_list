@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ 液态玻璃底（Apple Liquid Glass 风格）。
+ 卡片拿不到壁纸像素，做不了真实模糊，所以用「暗底 + 冷白磨砂 + 顶部高光 + 底部渐暗 + 1dp 亮边」
+ 这套组合去模拟：整体像一层半透明玻璃，上沿有反光、下沿略暗显得有厚度，外圈一圈亮线收边。
+ 圆角 22dp，比普通卡片更圆，贴近 iOS 的胶囊感。
+ 注意：<item> 的 android:top/bottom 只接受具体长度，不接受百分比（AAPT 会报
+ '55%' is incompatible with attribute bottom (attr) dimension），所以层次靠渐变自身衰减来分区。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. 暗色底：让白字在任何壁纸上都有对比度（相当于把模糊后的背景压暗一档） -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#47000000" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+
+    <!-- 2. 冷白磨砂：自上而下衰减的白，模拟玻璃里的散射光 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="#1CFFFFFF"
+                android:endColor="#0AFFFFFF"
+                android:startColor="#38FFFFFF" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+
+    <!-- 3. 顶部镜面高光：只在上沿快速衰减，形成一条反光带 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#00000000"
+                android:startColor="#4AFFFFFF" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+
+    <!-- 4. 底部内阴影：下半部分渐暗，玻璃才有厚度 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="#00000000"
+                android:endColor="#33000000"
+                android:startColor="#00000000" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+
+    <!-- 5. 外圈 1dp 亮边：玻璃和壁纸的分界线 -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="#59FFFFFF" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+</layer-list>
